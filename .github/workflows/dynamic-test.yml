@@ -1,4 +1,4 @@
-name: Dynamic Test
+name: Cool Stuff Generator 🚀
 
 on:
   workflow_dispatch:
@@ -12,12 +12,17 @@ on:
         required: true
         default: "false"
         type: boolean
+      run_cool_stuff:
+        description: "Run the cool stuff generator?"
+        required: true
+        default: "true"
+        type: boolean
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo (optional)
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Print input message
@@ -26,3 +31,10 @@ jobs:
       - name: Conditional step
         if: ${{ github.event.inputs.include_extra_step == 'true' }}
         run: echo "✅ Extra step was included!"
+
+      - name: Run Cool Stuff Generator 🎨
+        if: ${{ github.event.inputs.run_cool_stuff == 'true' }}
+        run: |
+          echo "🚀 Running the cool stuff generator..."
+          python3 cool_stuff.py
+          echo "✨ Cool stuff generated successfully!"

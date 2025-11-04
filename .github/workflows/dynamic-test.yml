@@ -26,3 +26,22 @@ jobs:
       - name: Conditional step
         if: ${{ github.event.inputs.include_extra_step == 'true' }}
         run: echo "✅ Extra step was included!"
+
+      - name: Another Cool Display
+        run: |
+          echo "╔══════════════════════════════════════════════════╗"
+          echo "║                                                  ║"
+          echo "║    🎊 ANOTHER COOL THING HAPPENING HERE! 🎊     ║"
+          echo "║                                                  ║"
+          echo "╚══════════════════════════════════════════════════╝"
+          echo ""
+          echo "🌟 Status: AWESOME"
+          echo "🚀 Speed: LUDICROUS"
+          echo "💯 Coolness Level: OVER 9000"
+          echo ""
+          echo "┌─────────────────────────────────┐"
+          echo "│  Loading coolness...            │"
+          echo "│  ████████████████████ 100%      │"
+          echo "└─────────────────────────────────┘"
+          echo ""
+          echo "✨ Mission Accomplished! ✨"

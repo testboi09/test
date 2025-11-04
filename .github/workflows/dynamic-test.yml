@@ -26,3 +26,13 @@ jobs:
       - name: Conditional step
         if: ${{ github.event.inputs.include_extra_step == 'true' }}
         run: echo "✅ Extra step was included!"
+
+      - name: Show some cool art
+        run: |
+          echo "🎨 Here's something cool:"
+          echo "  _____ _____ _____ _____ "
+          echo " |     |     |     |     |"
+          echo " |  C  |  O  |  O  |  L  |"
+          echo " |_____|_____|_____|_____|"
+          echo ""
+          echo "✨ Workflow completed successfully! ✨"
